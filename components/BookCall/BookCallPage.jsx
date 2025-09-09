@@ -8,7 +8,7 @@ const PopupButton = dynamic(
 );
 
 const BookCallPage = () => {
-  const [root, setRoot] = useState<HTMLElement | null>(null);
+  const [root, setRoot] = useState(null);
 
   useEffect(() => {
     setRoot(document.body);
