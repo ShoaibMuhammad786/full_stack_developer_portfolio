@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-heading {
+  font-size: clamp(35px, 4.5vw, 70px);
+  @apply font-semibold tracking-tighter leading-[1] text-start;
+}
+
+.secondary-text {
+  @apply text-gray-500;
+}
+
+.padding-x {
+  @apply px-5 px-8 lg:px-20;
+}
+
+.padding-y {
+  @apply py-20 lg:py-32;
+}
+
+.section-heading {
+  @apply text-3xl md:text-3xl lg:text-5xl font-semibold leading-none tracking-tighter;
+}
