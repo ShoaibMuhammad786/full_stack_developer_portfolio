@@ -6,7 +6,7 @@ const ServiceCard = ({ service, index }) => {
   return (
     <AnimatedText>
       <div
-        className={`text-start p-6 rounded-2xl flex flex-col items-start justify-center gap-y-3 bg-[#f3f3f3] min-h-[230px]`}
+        className={`text-start p-6 rounded-2xl flex flex-col items-start justify-center gap-y-3 bg-[#f9f9f9] min-h-[230px]`}
       >
         <img src={service?.icon} alt="" className="max-w-10 grayscale"/>
         <h3 className="text-xl md:text-2xl lg:text-2xl font-semibold leading-[0.8] tracking-tight">

@@ -11,11 +11,10 @@ const Testimonials = () => {
         </h2>
       </AnimatedText>
 
-      <div className="w-full flex items-center justify-center gap-10 mt-12">
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
+      <div className="w-full flex items-center justify-center gap-10 mt-12 relative animate-marquee hover:[animation-play-state:paused]">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((_, i) => (
+          <TestimonialCard key={i} />
+        ))}
       </div>
     </section>
   );

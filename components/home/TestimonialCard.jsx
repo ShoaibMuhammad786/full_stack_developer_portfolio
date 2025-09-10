@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedText from "../common/AnimatedText";
+import Image from "next/image";
 
 const TestimonialCard = () => {
   return (
@@ -14,11 +15,12 @@ const TestimonialCard = () => {
         </p>
 
         <div className="flex items-center gap-2 mt-5">
-          <img
+          <Image
             src="/profile-picture.jpg"
             alt="profile picture"
             width={45}
             height={45}
+            loading="lazy"
             className="w-12 h-12 rounded-full object-cover"
           />
 
