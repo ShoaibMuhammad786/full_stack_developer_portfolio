@@ -9,14 +9,16 @@ const Hero = () => {
   return (
     <section className="w-full flex flex-col items-start justify-center gap-5 relative padding-x pb-20 pt-32 lg:pb-32 lg:pt-40 2xl:pt-52">
       <AnimatedText direction="left">
-        <Image
-          src={"/profile-picture.jpg"}
-          width={200}
-          height={200}
-          alt="profile-picture"
-          priority
-          className="rounded-full object-cover"
-        />
+        <div className="bg-[#f6f6f6] rounded-full max-w-[110px] h-[110px] flex items-end justify-center overflow-hidden">
+          <Image
+            src={"/shoaib-muhammad-profile-picture.webp"}
+            width={170}
+            height={170}
+            alt="profile-picture"
+            priority
+            className="object-contain max-w-[130px]"
+          />
+        </div>
       </AnimatedText>
       <AnimatedText direction="right">
         <h1 className="main-heading z-10">

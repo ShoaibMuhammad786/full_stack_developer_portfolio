@@ -1,6 +1,7 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
 import AnimatedText from "../common/AnimatedText";
+import { TESTIMONIALS } from "@/constants/testimonials";
 
 const Testimonials = () => {
   return (
@@ -12,8 +13,8 @@ const Testimonials = () => {
       </AnimatedText>
 
       <div className="w-full flex items-center justify-center gap-10 mt-12 relative animate-marquee hover:[animation-play-state:paused]">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((_, i) => (
-          <TestimonialCard key={i} />
+        {TESTIMONIALS?.map((testimonial, i) => (
+          <TestimonialCard key={i} testimonial={testimonial} />
         ))}
       </div>
     </section>
