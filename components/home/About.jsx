@@ -29,13 +29,15 @@ const About = () => {
           "Passionate about clean architecture, testing, and performance optimization.",
         ]?.map((skill, index) => {
           return (
-            <li
-              key={index}
-              className="lg:w-[90%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight flex items-center gap-2"
-            >
-              <GoCheckCircleFill className="text-base text-gray-500"/>
-              <strong className="font-normal">{skill}</strong>
-            </li>
+            <AnimatedText>
+              <li
+                key={index}
+                className="lg:w-[90%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight flex items-center gap-2"
+              >
+                <GoCheckCircleFill className="text-base text-gray-500" />
+                <strong className="font-normal">{skill}</strong>
+              </li>
+            </AnimatedText>
           );
         })}
       </ul>
