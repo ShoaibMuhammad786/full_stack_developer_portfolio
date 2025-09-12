@@ -35,7 +35,7 @@ const HomePage = () => {
     };
   }, []);
   return (
-    <main className="w-full relative max-w-[1200px] mx-auto bg-white border-l border-r">
+    <main className="w-full relative lg:w-[80%] xl:w-[1200px] mx-auto bg-white border-l border-r">
       <Hero />
       <Projects />
       <About />

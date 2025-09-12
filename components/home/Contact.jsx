@@ -1,5 +1,6 @@
 import React from "react";
 import AnimatedText from "../common/AnimatedText";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -13,11 +14,28 @@ const Contact = () => {
         <AnimatedText>
           <p className="main-description lg:w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
             <strong className="font-normal">
-              Hello! I’m Shoaib Muhammad, a{" "}
-              <span className="font-medium">Full Stack Web Developer</span> with
-              a deep passion for crafting modern, responsive, and
-              high-performance user interfaces using React.js and Next.js. I
-              turn complex ideas into smooth, elegant digital experiences.
+              Whether you’re looking for a Full Stack MERN Developer to create a
+              new project, optimize your existing application, or collaborate on
+              innovative ideas — I’m always open to exciting opportunities.
+              Reach out to me via the contact form or connect with me on{" "}
+              <Link
+                href={`https://www.linkedin.com/in/shoaib-muhammad-mern-stack-developer/`}
+                className="font-medium"
+                target="_blank"
+                aria-label="link to my linkedin account"
+              >
+                LinkedIn
+              </Link>
+              /
+              <Link
+                className="font-medium"
+                href={`https://github.com/ShoaibMuhammad786`}
+                target="_blank"
+                aria-label="link to my github account"
+              >
+                GitHub
+              </Link>{" "}
+              to discuss your project.
             </strong>
           </p>
         </AnimatedText>

@@ -30,13 +30,16 @@ const Hero = () => {
       <AnimatedText direction="left">
         <p className="main-description lg:max-w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
           <strong className="font-normal">
-            Hello! I’m Shoaib Muhammad, a{" "}
-            <span className="font-medium">Full Stack Web Developer</span> with a
-            deep passion for crafting modern, responsive, and high-performance
-            user interfaces using{" "}
-            <span className="font-medium">MERN Stack</span> and{" "}
-            <span className="font-medium">Next.js</span>. I turn complex ideas
-            into smooth, elegant digital experiences.
+            I design and develop fast, scalable, and responsive web applications
+            using the <span className="font-medium">MERN stack.</span> From
+            crafting modern frontends with{" "}
+            <span className="font-medium">React.js </span>
+            and <span className="font-medium">Next.js</span> to building robust
+            backends with <span className="font-medium">Node.js</span>,{" "}
+            <span className="font-medium">Express.js</span>, and{" "}
+            <span className="font-medium">MongoDB</span>, I bring ideas to life
+            with clean, optimized, and maintainable code. Passionate about
+            problem-solving, performance, and user-friendly digital experiences.
           </strong>
         </p>
       </AnimatedText>
