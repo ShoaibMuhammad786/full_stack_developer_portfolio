@@ -9,7 +9,7 @@ import BlackButton from "../common/BlackButton";
 const Navbar = () => {
   return (
     <header className="w-full flex items-center justify-center z-50 fixed top-5">
-      <nav className="mx-auto flex items-center justify-center gap-2 border rounded-3xl py-1 px-1 bg-white">
+      <nav className="mx-auto flex items-center justify-center gap-2 border rounded-3xl py-3 lg:py-1 px-1 bg-white">
         <Link href={`/`} aria-label="link to home page" className="block px-5">
           <TiHomeOutline className="text-2xl" />
         </Link>

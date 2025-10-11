@@ -29,7 +29,6 @@
   @apply text-3xl md:text-3xl lg:text-5xl font-semibold leading-none tracking-tighter;
 }
 
-
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -41,4 +40,8 @@
 
 .animate-marquee {
   animation: marquee 10s linear infinite;
+}
+
+textarea {
+  resize: none;
 }

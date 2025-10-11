@@ -7,14 +7,14 @@ const PorftolioProjects = () => {
   return (
     <section className="w-full relative overflow-hidden padding-x padding-y">
       <AnimatedText>
-        <h2 className="section-heading text-center">
+        <h2 className="section-heading text-center w-[80%] mx-auto">
           <strong className="font-semibold">
             Work That I have Done So Far
           </strong>
         </h2>
       </AnimatedText>
 
-      <div className="w-full mt-12 grid grid-cols-2 gap-10">
+      <div className="w-full mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />

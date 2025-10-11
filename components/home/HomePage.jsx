@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import Lenis from "lenis";
 
 const HomePage = () => {
+  
   useEffect(() => {
     const lenis = new Lenis({
       duration: 3, // default is 1.2, lower = faster, higher = smoother
@@ -34,8 +35,9 @@ const HomePage = () => {
       lenis.destroy();
     };
   }, []);
+
   return (
-    <main className="w-full relative lg:w-[80%] xl:w-[1200px] mx-auto bg-white border-l border-r">
+    <main className="w-full relative lg:w-[80%] xl:w-[1200px] 2xl:w-[1600px] mx-auto bg-white border-l border-r">
       <Hero />
       <Projects />
       <About />
