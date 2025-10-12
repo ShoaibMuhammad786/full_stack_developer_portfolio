@@ -29,6 +29,7 @@ const ProjectCard = ({ project, index }) => {
           <Link
             href={project?.url ? project?.url : `/`}
             aria-label="Project link"
+            target="_blank"
             className="bg-gray-300/30 text-gray-500 text-base lg:text-base px-2 py-2 rounded-lg font-semibold inline-flex items-center  hover:bg-black hover:text-white transition-all duration-300"
           >
             <FiArrowUpRight className="text-xl" />
