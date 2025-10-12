@@ -17,7 +17,7 @@ export const WORK_EXPERIENCE = [
     companyName: "Regex Dot Pvt Ltd",
     designation: "Software Engineer Intern",
     timeline: "Jan 2024 - Mar 2024",
-    companyLogo: "/regexdot_logo.jfif",
+    companyLogo: "/regexdot-logo.jpg",
     companyLinkedIn: "https://www.linkedin.com/company/regexdot/posts/?feedView=all",
   },
 ];
