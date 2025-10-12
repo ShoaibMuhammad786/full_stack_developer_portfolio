@@ -17,21 +17,21 @@ const ProjectCard = ({ project, index }) => {
           className="lg:h-[240px] xl:h-[320px] 2xl:h-[380px] max-h-[380px] object-cover rounded-[20px]"
         />
 
-        <div className="w-full pt-5 space-y-3">
+        <div className="w-full pt-5 flex items-center justify-between gap-2">
           <h3 className="text-xl md:text-2xl lg:text-2xl font-semibold leading-none tracking-tight">
             <strong className="font-semibold">{project?.title}</strong>
           </h3>
-          {project?.description && (
+          {/* {project?.description && (
             <p className="main-description text-start text-lg leading-[1.3] secondary-text z-10 tracking-tight">
               <strong className="font-normal">{project?.description}</strong>
             </p>
-          )}
+          )} */}
           <Link
             href={project?.url ? project?.url : `/`}
             aria-label="Project link"
-            className="bg-gray-300/30 text-gray-500 text-base lg:text-base px-6 py-4 rounded-2xl font-semibold inline-flex items-center gap-2 mt-2 hover:bg-black hover:text-white transition-all duration-300"
+            className="bg-gray-300/30 text-gray-500 text-base lg:text-base px-2 py-2 rounded-lg font-semibold inline-flex items-center  hover:bg-black hover:text-white transition-all duration-300"
           >
-            View Project <FiArrowUpRight className="text-xl" />
+            <FiArrowUpRight className="text-xl" />
           </Link>
         </div>
       </div>

@@ -24,7 +24,7 @@ const PorftolioProjects = () => {
        
       </div>
 
-      <AnimatedText>
+      {/* <AnimatedText>
         <div className="w-full flex justify-center mt-16">
           <button
             type="button"
@@ -33,7 +33,7 @@ const PorftolioProjects = () => {
             View More <FiArrowUpRight className="text-xl" />
           </button>
         </div>
-      </AnimatedText>
+      </AnimatedText> */}
     </section>
   );
 };

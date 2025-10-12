@@ -49,8 +49,9 @@ const HomePage = () => {
       <Experience />
       <Border />
       <PorftolioProjects />
+      <Border />
       <Services />
-      {/* <Border /> */}
+      <Border />
       <Testimonials />
       <Border />
       <Contact />
