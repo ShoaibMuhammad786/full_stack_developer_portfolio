@@ -5,7 +5,7 @@ import Image from "next/image";
 const TestimonialCard = ({ testimonial }) => {
   return (
     // <AnimatedText>
-      <div className="min-w-[430px] bg-[#f9f9f9] py-7 px-9 rounded-2xl border border-gray-100">
+      <div className="min-w-[430px] min-h-[250px] bg-[#f9f9f9] py-7 px-9 rounded-2xl border border-gray-100 flex flex-col items-start justify-between">
         <p className="text-lg leading-[1.2] secondary-text">
           <strong className="font-normal">{testimonial?.review}</strong>
         </p>

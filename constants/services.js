@@ -49,7 +49,7 @@ export const SERVICES = [
   },
   {
     title: "API Integration & Data Fetching",
-    icon:"/icons/api-integration-service-icon.png",
+    icon:"/icons/api-integration-and-data-fetching-icon.png",
     description:
       "Connecting frontend with backend APIs using RESTful and GraphQL for dynamic data rendering.",
   },

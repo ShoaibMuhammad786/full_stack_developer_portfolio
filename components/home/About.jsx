@@ -15,7 +15,7 @@ const About = () => {
           <strong className="font-normal">
             I am a dedicated{" "}
             <span className="font-medium">Full Stack Web Developer</span>{" "}
-            specializing in the <span className="font-medium">MERN </span>
+            specialized in the <span className="font-medium">MERN </span>
             stack (MongoDB, Express.js, React.js, Node.js) with hands-on
             experience in building dynamic web applications.
           </strong>

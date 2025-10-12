@@ -5,7 +5,7 @@ const Border = () => {
   return (
     <section className="w-full padding-x">
       <AnimatedText>
-        <div className="w-full border mx-auto" />
+        <div className="w-full border opacity-60 mx-auto" />
       </AnimatedText>
     </section>
   );

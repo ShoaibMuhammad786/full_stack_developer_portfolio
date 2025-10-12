@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../common/ProjectCard";
 import AnimatedText from "../common/AnimatedText";
 import { FiArrowUpRight } from "react-icons/fi";
+import { PROJECTS } from "@/constants/projects";
 
 const PorftolioProjects = () => {
   return (
@@ -15,10 +16,12 @@ const PorftolioProjects = () => {
       </AnimatedText>
 
       <div className="w-full mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+       {
+        PROJECTS?.map((project, index)=>{
+          return  <ProjectCard project={project} index={index}/>
+        })
+       }
+       
       </div>
 
       <AnimatedText>
