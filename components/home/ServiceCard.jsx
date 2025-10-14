@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ServiceCard = ({ service, index }) => {
   return (
-    <AnimatedText>
+    <AnimatedText key={index}>
       <div
         className={`text-start p-6 2xl:p-10 rounded-2xl flex flex-col items-start justify-start gap-y-3 bg-[#f9f9f9] lg:h-[260px] xl:h-[230px] 2xl:min-h-[250px]`}
       >
@@ -16,8 +16,8 @@ const ServiceCard = ({ service, index }) => {
           height={45}
           className="max-w-10 grayscale"
         />
-        <h3 className="text-xl md:text-2xl lg:text-2xl font-semibold leading-[0.8] tracking-tight">
-          <strong className="font-semibold">{service?.title}</strong>
+        <h3 className="text-xl md:text-2xl lg:text-2xl tracking-tight">
+          <strong className="font-semibold leading-none">{service?.title}</strong>
         </h3>
         <p className="main-description text-lg leading-[1.3] secondary-text z-10 tracking-tight">
           <strong className="font-normal">{service?.description}</strong>

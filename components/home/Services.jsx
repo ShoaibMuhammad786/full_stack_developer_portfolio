@@ -14,7 +14,7 @@ const Services = () => {
 
       <div className="w-full mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6">
         {SERVICES?.map((service, index) => {
-          return <ServiceCard key={index} service={service} index={index}/>;
+          return <ServiceCard service={service} index={index}/>;
         })}
       </div>
     </section>
