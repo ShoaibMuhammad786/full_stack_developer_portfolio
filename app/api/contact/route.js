@@ -3,9 +3,6 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
     const { name, email, message } = await req.json();
-    console.log(name);
-    console.log(email);
-    console.log(message);
 
     if (!name || !email || !message) {
       return new Response(
