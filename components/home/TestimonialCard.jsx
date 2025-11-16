@@ -5,33 +5,31 @@ import Image from "next/image";
 const TestimonialCard = ({ testimonial }) => {
   return (
     // <AnimatedText>
-      <div className="min-w-[430px] min-h-[250px] bg-[#f9f9f9] py-7 px-9 rounded-2xl border border-gray-100 flex flex-col items-start justify-between">
-        <p className="text-lg leading-[1.2] secondary-text">
-          <strong className="font-normal">{testimonial?.review}</strong>
-        </p>
+    <div className="min-w-[430px] min-h-[250px] bg-[#f9f9f9] py-7 px-9 rounded-2xl border border-gray-100 flex flex-col items-start justify-between">
+      <p className="text-lg leading-[1.2] secondary-text">
+        <strong className="font-normal">{testimonial?.review}</strong>
+      </p>
 
-        <div className="flex items-center gap-2 mt-5">
-          <Image
-            src={testimonial?.image}
-            alt={`${testimonial?.author} profile picture`}
-            width={45}
-            height={45}
-            loading="lazy"
-            className="w-12 h-12 rounded-full object-cover"
-          />
+      <div className="flex items-center gap-2 mt-5">
+        <Image
+          src={`/profile-icon.png`}
+          alt={`${testimonial?.author} profile picture`}
+          width={45}
+          height={45}
+          loading="lazy"
+          className="w-10 h-10 rounded-full object-cover"
+        />
 
-          <div className="flex flex-col items-start">
-            <p className="font-semibold text-gray-600">
-              <strong className="font-semibold">{testimonial?.author}</strong>
-            </p>
-            <p className="text-xs text-gray-600">
-              <strong className="font-normal">
-                {testimonial?.designation}
-              </strong>
-            </p>
-          </div>
+        <div className="flex flex-col items-start">
+          <p className="font-semibold text-gray-600">
+            <strong className="font-semibold">{testimonial?.author}</strong>
+          </p>
+          <p className="text-xs text-gray-600">
+            <strong className="font-normal">{testimonial?.designation}</strong>
+          </p>
         </div>
       </div>
+    </div>
     // </AnimatedText>
   );
 };
