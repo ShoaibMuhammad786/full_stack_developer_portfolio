@@ -43,12 +43,13 @@ const HomePage = () => {
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
       />
       <Hero />
-      <Projects />
+      {/* <Projects /> */}
+      <Border />
       <About />
       <Border />
       <Experience />
-      <Border />
-      <PorftolioProjects />
+      {/* <Border /> */}
+      {/* <PorftolioProjects /> */}
       <Border />
       <Services />
       <Border />
