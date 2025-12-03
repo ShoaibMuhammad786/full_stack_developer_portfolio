@@ -11,7 +11,7 @@ import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Lenis from "lenis";
-import { SnackbarProvider, enqueueSnackbar } from "notistack";
+import { SnackbarProvider } from "notistack";
 
 const HomePage = () => {
   useEffect(() => {
@@ -40,7 +40,7 @@ const HomePage = () => {
     <main className="w-full relative lg:w-[80%] xl:w-[1200px] 2xl:w-[1300px] mx-auto bg-transparent border-l border-r">
       <SnackbarProvider
         autoHideDuration={2000}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
       />
       <Hero />
       {/* <Projects /> */}

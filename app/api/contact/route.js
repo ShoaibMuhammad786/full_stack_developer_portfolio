@@ -17,15 +17,15 @@ export async function POST(req) {
       port: 465,
       secure: true,
       auth: {
-        user: 'smshoaib2001@gmail.com', // your email
-        pass: 'lowq hbgr vpzu olbi', // your app password
+        user: "smshoaib2001@gmail.com", // your email
+        pass: "kapa vhuz qvah bqyv", // your app password
       },
     });
 
     // Email content
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: 'smshoaib2001@gmail.com',
+      to: "smshoaib2001@gmail.com",
       subject: `New Message from ${name}`,
       text: `
         You have a new message from your portfolio contact form:
@@ -46,7 +46,9 @@ export async function POST(req) {
   } catch (error) {
     console.error("Email sending failed:", error);
     return new Response(
-      JSON.stringify({ error: "Failed to send message. Please try again later." }),
+      JSON.stringify({
+        error: "Failed to send message. Please try again later.",
+      }),
       { status: 500 }
     );
   }
