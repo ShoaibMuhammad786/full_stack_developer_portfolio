@@ -1,47 +1,64 @@
 import Link from "next/link";
 import React from "react";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaInstagram } from "react-icons/fa6";
 import { TiHomeOutline } from "react-icons/ti";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { FaInstagram } from "react-icons/fa";
 import AnimatedText from "../common/AnimatedText";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex items-center justify-center pb-10 overflow-hidden">
+    <footer
+      className="w-full flex items-center justify-center pb-10 overflow-hidden"
+      role="contentinfo"
+      aria-label="Website footer"
+    >
       <AnimatedText>
-        <div className="flex items-center justify-center gap-2 px-2 bg-white mx-auto">
-          <Link href={`/`} aria-label="link to home page" className="block px-5">
-            <TiHomeOutline className="text-2xl" />
+        <nav
+          className="flex items-center justify-center gap-2 px-2 bg-white mx-auto"
+          aria-label="Footer navigation and social links"
+        >
+          {/* Home */}
+          <Link
+            href="/"
+            aria-label="Go to homepage"
+            className="block px-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black rounded-full"
+          >
+            <TiHomeOutline className="text-2xl" aria-hidden="true" />
           </Link>
 
+          {/* GitHub */}
           <Link
-            href={`https://github.com/ShoaibMuhammad786`}
+            href="https://github.com/ShoaibMuhammad786"
             target="_blank"
-            aria-label="link to my github account"
-            className="block px-5"
+            rel="noopener noreferrer"
+            aria-label="View Shoaib Muhammad’s GitHub profile"
+            className="block px-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black rounded-full"
           >
-            <FaGithub className="text-2xl" />
+            <FaGithub className="text-2xl" aria-hidden="true" />
           </Link>
 
+          {/* LinkedIn */}
           <Link
-            href={`https://www.linkedin.com/in/shoaib-muhammad-mern-stack-developer/`}
+            href="https://www.linkedin.com/in/shoaib-muhammad-mern-stack-developer/"
             target="_blank"
-            aria-label="link to my linkedin account"
-            className="block px-5"
+            rel="noopener noreferrer"
+            aria-label="Connect with Shoaib Muhammad on LinkedIn"
+            className="block px-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black rounded-full"
           >
-            <IoLogoLinkedin className="text-2xl" />
+            <IoLogoLinkedin className="text-2xl" aria-hidden="true" />
           </Link>
 
+          {/* Instagram */}
           <Link
-            href={`https://www.instagram.com/iam_shoaibmemon/`}
+            href="https://www.instagram.com/iam_shoaibmemon/"
             target="_blank"
-            aria-label="link to my instagram account"
-            className="block px-5"
+            rel="noopener noreferrer"
+            aria-label="View Shoaib Muhammad’s Instagram profile"
+            className="block px-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black rounded-full"
           >
-            <FaInstagram className="text-2xl" />
+            <FaInstagram className="text-2xl" aria-hidden="true" />
           </Link>
-        </div>
+        </nav>
       </AnimatedText>
     </footer>
   );

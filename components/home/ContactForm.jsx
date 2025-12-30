@@ -6,7 +6,6 @@ import * as Yup from "yup";
 import { enqueueSnackbar } from "notistack";
 
 const ContactForm = () => {
-  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
   const formik = useFormik({
@@ -14,6 +13,7 @@ const ContactForm = () => {
       name: "",
       email: "",
       message: "",
+      company: "",
     },
     validationSchema: Yup.object({
       name: Yup.string()
@@ -24,20 +24,16 @@ const ContactForm = () => {
 
       email: Yup.string()
         .email("Invalid email address")
-        .required("Please enter your email address")
-        .matches(
-          /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
-          "Invalid email format"
-        ),
+        .required("Please enter your email address"),
 
       message: Yup.string()
         .min(20, "Message must be at least 20 characters")
-        .max(500, "Message must be 500 characters or less")
+        .max(1500, "Message must be 1500 characters or less")
         .required("Please enter your message"),
     }),
-    validateOnChange: true,
-    validateOnBlur: true,
     onSubmit: async (values, { resetForm }) => {
+      if (values.company) return;
+
       try {
         setLoading(true);
         const res = await fetch("/api/contact", {
@@ -46,26 +42,15 @@ const ContactForm = () => {
           body: JSON.stringify(values),
         });
 
-        const data = await res.json();
-
         if (res.ok) {
-          // setStatus("✅ Message sent successfully!");
-          enqueueSnackbar("Message sent successfully!", {
-            variant: "success",
-          });
+          enqueueSnackbar("Message sent successfully!", { variant: "success" });
           resetForm();
         } else {
-          // setStatus(`❌ ${data.error}`);
-          enqueueSnackbar(
-            data.error || "Something went wrong. Try again later.",
-            {
-              variant: "error",
-            }
-          );
+          enqueueSnackbar("Something went wrong. Try again later.", {
+            variant: "error",
+          });
         }
-      } catch (err) {
-        console.log(err);
-        // setStatus("❌ Something went wrong. Try again later.");
+      } catch {
         enqueueSnackbar("Something went wrong. Try again later.", {
           variant: "error",
         });
@@ -74,74 +59,116 @@ const ContactForm = () => {
       }
     },
   });
+
   return (
-    <form onSubmit={formik.handleSubmit} className="w-full mt-12">
-      {/* {status && <p className="text-center mt-4 mb-6">{status}</p>} */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <form
+      onSubmit={formik.handleSubmit}
+      className="w-full mt-12"
+      noValidate
+      aria-label="Contact form"
+    >
+      {/* Honeypot field (hidden from users) */}
+      <input
+        type="text"
+        name="company"
+        value={formik.values.company}
+        onChange={formik.handleChange}
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Name */}
         <AnimatedText>
+          <label htmlFor="name" className="sr-only">
+            Your Name
+          </label>
           <input
-            type="text"
             id="name"
             name="name"
+            type="text"
+            autoComplete="name"
+            placeholder="Your name"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
-            placeholder="Enter your name"
-            className="bg-[#f9f9f9] px-5 py-4 outline-none text-lg rounded-xl w-full"
+            aria-invalid={Boolean(formik.touched.name && formik.errors.name)}
+            aria-describedby="name-error"
+            className="bg-[#f9f9f9] px-5 py-4 rounded-xl w-full text-lg outline-none"
           />
           {formik.touched.name && formik.errors.name && (
-            <div className="text-xs text-red-500 px-0.5">
+            <p id="name-error" className="text-xs text-red-500 mt-1">
               {formik.errors.name}
-            </div>
+            </p>
           )}
         </AnimatedText>
+
+        {/* Email */}
         <AnimatedText>
+          <label htmlFor="email" className="sr-only">
+            Email Address
+          </label>
           <input
-            type="email"
             id="email"
             name="email"
+            type="email"
+            autoComplete="email"
+            placeholder="Your email"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
-            placeholder="Enter your email"
-            className="bg-[#f9f9f9] px-5 py-4 outline-none text-lg rounded-xl w-full"
+            aria-invalid={Boolean(formik.touched.email && formik.errors.email)}
+            aria-describedby="email-error"
+            className="bg-[#f9f9f9] px-5 py-4 rounded-xl w-full text-lg outline-none"
           />
           {formik.touched.email && formik.errors.email && (
-            <div className="text-xs text-red-500 px-0.5">
+            <p id="email-error" className="text-xs text-red-500 mt-1">
               {formik.errors.email}
-            </div>
-          )}
-        </AnimatedText>
-      </div>
-      <div className="w-full mt-6">
-        <AnimatedText>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.message}
-            placeholder="Write your message..."
-            className="w-full bg-[#f9f9f9] rounded-xl px-5 py-4 text-lg outline-none"
-          ></textarea>
-          {formik.touched.message && formik.errors.message && (
-            <div className="text-xs text-red-500 px-0.5">
-              {formik.errors.message}
-            </div>
+            </p>
           )}
         </AnimatedText>
       </div>
 
-      <div className="w-full mt-5">
+      {/* Message */}
+      <div className="mt-6">
+        <AnimatedText>
+          <label htmlFor="message" className="sr-only">
+            Your Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={6}
+            autoComplete="off"
+            placeholder="Tell me about your project..."
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.message}
+            aria-invalid={Boolean(
+              formik.touched.message && formik.errors.message
+            )}
+            aria-describedby="message-error"
+            className="bg-[#f9f9f9] px-5 py-4 rounded-xl w-full text-lg outline-none"
+          />
+          {formik.touched.message && formik.errors.message && (
+            <p id="message-error" className="text-xs text-red-500 mt-1">
+              {formik.errors.message}
+            </p>
+          )}
+        </AnimatedText>
+      </div>
+
+      {/* Submit */}
+      <div className="mt-6">
         <AnimatedText>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-black text-white text-lg px-8 py-4 rounded-xl font-semibold disabled:opacity-80 disabled:cursor-wait"
+            aria-busy={loading}
+            className="w-full bg-black text-white px-8 py-4 rounded-xl text-lg font-semibold focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black disabled:opacity-80"
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? "Sending…" : "Send Message"}
           </button>
         </AnimatedText>
       </div>
