@@ -30,14 +30,14 @@ export const PROJECTS = [
   //   type: "Website",
   //   tech_stack: ["Reactjs", "Tailwind CSS", "Framer Motion"],
   // },
-  {
-    image: "/projects/dignite-studios-website.png",
-    title: "Dignite Studios",
-    description: "",
-    url: "https://www.dignitestudios.com/",
-    type: "Website",
-    tech_stack: ["Nextjs", "Tailwind CSS", "Framer Motion"],
-  },
+  // {
+  //   image: "/projects/dignite-studios-website.png",
+  //   title: "Dignite Studios",
+  //   description: "",
+  //   url: "https://www.dignitestudios.com/",
+  //   type: "Website",
+  //   tech_stack: ["Nextjs", "Tailwind CSS", "Framer Motion"],
+  // },
   {
     image: "/projects/spartax-mockup.png",
     title: "Spartax",
