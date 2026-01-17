@@ -16,13 +16,13 @@ const HomePage = () => {
     <HomeClient>
       <main className="w-full relative lg:w-[80%] xl:w-[1200px] 2xl:w-[1300px] mx-auto bg-transparent border-l border-r">
         <Hero />
-        {/* <Projects /> */}
+        <Projects />
         <Border />
         <About />
         <Border />
         <Experience />
-        {/* <Border /> */}
-        {/* <PorftolioProjects /> */}
+        <Border />
+        <PorftolioProjects />
         <Border />
         <Services />
         <Border />
