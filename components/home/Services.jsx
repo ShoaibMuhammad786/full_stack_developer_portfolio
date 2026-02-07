@@ -20,7 +20,6 @@ const Services = () => {
         </header>
       </AnimatedText>
 
-      {/* Services Grid */}
       <div
         className="w-full mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6"
         role="list"

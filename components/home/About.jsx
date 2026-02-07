@@ -1,6 +1,6 @@
 import React from "react";
 import AnimatedText from "../common/AnimatedText";
-import { GoCheckCircleFill } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 
 const About = () => {
   return (
@@ -42,15 +42,19 @@ const About = () => {
           "Strong understanding of Redux Toolkit, Context API, and modern state management patterns.",
           "Focused on clean code architecture, performance optimization, accessibility, and testing best practices.",
         ].map((skill, index) => (
-          <AnimatedText key={index}>
-            <li className="text-start text-xl leading-[1.35] secondary-text tracking-tight flex items-start gap-2">
-              <GoCheckCircleFill
-                className="text-base text-gray-500 mt-1"
-                aria-hidden="true"
-              />
-              <span>{skill}</span>
-            </li>
-          </AnimatedText>
+          <li className="text-start">
+            <AnimatedText key={index}>
+              <div className="w-full flex items-start gap-2">
+                <GoDotFill
+                  className="text-base text-gray-500 mt-1"
+                  aria-hidden="true"
+                />
+                <span className="text-xl leading-[1.35] secondary-text tracking-tight">
+                  {skill}
+                </span>
+              </div>
+            </AnimatedText>
+          </li>
         ))}
       </ul>
 
