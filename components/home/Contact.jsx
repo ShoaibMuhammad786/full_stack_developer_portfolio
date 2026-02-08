@@ -34,7 +34,7 @@ const Contact = () => {
             <br />
             You can reach out using the contact form below or connect with me on{" "}
             <Link
-              href="https://www.linkedin.com/in/shoaib-muhammad-mern-stack-developer/"
+              href="https://www.linkedin.com/in/shoaib-muhammad-frontend-web-developer/"
               className="font-medium underline underline-offset-4"
               target="_blank"
               rel="noopener noreferrer"
