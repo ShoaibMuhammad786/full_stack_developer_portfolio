@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {/* GitHub */}
         <Link
-          href="https://github.com/ShoaibMuhammad786"
+          href="https://github.com/shoaibmuhammad-dev"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="View Shoaib Muhammad’s GitHub profile"

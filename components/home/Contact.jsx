@@ -44,7 +44,7 @@ const Contact = () => {
             </Link>{" "}
             or{" "}
             <Link
-              href="https://github.com/ShoaibMuhammad786"
+              href="https://github.com/shoaibmuhammad-dev"
               className="font-medium underline underline-offset-4"
               target="_blank"
               rel="noopener noreferrer"
