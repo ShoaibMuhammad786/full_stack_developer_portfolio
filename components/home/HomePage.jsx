@@ -22,8 +22,8 @@ const HomePage = () => {
         <Border />
         <Experience />
         <Border />
-        {/* <PorftolioProjects />
-        <Border /> */}
+        <PorftolioProjects />
+        <Border />
         <Services />
         <Border />
         <Testimonials />
