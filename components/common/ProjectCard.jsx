@@ -16,8 +16,11 @@ const ProjectCard = ({ project, index }) => {
           alt={`${project?.title} - ${project?.type} project preview`}
           width={1280}
           height={720}
-          priority={isAboveFold}
-          loading={isAboveFold ? "eager" : "lazy"}
+          // priority={isAboveFold}
+          priority={false}
+          // loading={isAboveFold ? "eager" : "lazy"}
+          loading={"lazy"}
+          sizes="(max-width: 768px) 250px, (max-width: 1200px) 720px, 1280px"
           className="lg:h-[240px] xl:h-[320px] 2xl:h-[380px] max-h-[380px] object-cover rounded-[20px]"
         />
 

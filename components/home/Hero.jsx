@@ -7,7 +7,7 @@ import AnimatedText from "../common/AnimatedText";
 const Hero = () => {
   return (
     <section
-      className="w-full flex flex-col items-start justify-center gap-5 relative padding-x pb-20 pt-32 lg:pb-32 lg:pt-40 2xl:pt-52"
+      className="w-full flex flex-col items-start justify-center gap-2 relative padding-x pb-20 pt-32 lg:pb-32 lg:pt-40 2xl:pt-52"
       aria-labelledby="hero-heading"
     >
       {/* Profile Image (Decorative + Personal Branding) */}
@@ -41,13 +41,17 @@ const Hero = () => {
 
       {/* SUPPORTING DESCRIPTION (KEYWORD-RICH, HUMAN) */}
       <AnimatedText direction="left">
-        <p className="main-description lg:max-w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
+        <p className="main-description mt-4 lg:max-w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
           I’m <strong className="font-medium">Shoaib Muhammad</strong>, a full
           stack web developer specializing in building fast, scalable, and
           SEO-friendly web applications using the{" "}
           <strong className="font-medium">MERN stack</strong>.
-          <br />
-          <br />I create modern frontends with{" "}
+        </p>
+      </AnimatedText>
+
+      <AnimatedText direction="left">
+        <p className="main-description mt-1 lg:max-w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
+          I create modern frontends with{" "}
           <strong className="font-medium">React.js</strong> and{" "}
           <strong className="font-medium">Next.js</strong>, and develop robust,
           secure backends using <strong className="font-medium">Node.js</strong>
@@ -61,7 +65,7 @@ const Hero = () => {
       {/* PRIMARY CTA (CONVERSION + SEO SIGNAL) */}
       <AnimatedText direction="right">
         <div
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 mt-5"
           role="group"
           aria-label="Primary actions"
         >
