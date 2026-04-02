@@ -8,9 +8,9 @@ const PorftolioProjects = () => {
   return (
     <section className="w-full relative overflow-hidden padding-x padding-y">
       <AnimatedText>
-        <h2 className="section-heading text-center w-[80%] mx-auto">
+        <h2 className="section-heading text-center lg:w-[60%] mx-auto">
           <strong className="font-semibold">
-            Work That I have Done So Far
+            My Recent Web Development Projects
           </strong>
         </h2>
       </AnimatedText>

@@ -5,6 +5,7 @@ export const PROJECTS = [
     description:
       "A modern tech company website built from scratch using Figma, Next.js, Tailwind CSS, and Framer Motion. Designed and developed a fully responsive, cross-browser compatible platform with optimized performance, effectively showcasing the company’s identity, services, and development expertise.",
     url: "https://launchboxglobal.com/",
+    code_url: null,
     type: "Website",
     tech_stack: [
       "Nextjs",
@@ -20,7 +21,8 @@ export const PROJECTS = [
     title: "Library Management System",
     description:
       "A full-stack Library Management System built using the MERN Stack. The system provides role-based access for Admins and Students, allowing efficient management of books, student accounts, and borrowing requests.",
-    url: "https://github.com/shoaibmuhammad-dev/Library-Management-System",
+    url: null,
+    code_url: "https://github.com/shoaibmuhammad-dev/Library-Management-System",
     type: "Website App",
     tech_stack: [
       "Reactjs",
@@ -37,8 +39,9 @@ export const PROJECTS = [
     image: "/projects/spartax-mockup.png",
     title: "Spartax",
     description:
-      "A full-stack eCommerce platform built using the MERN Stack with role-based access for Admins and Buyers. Implemented product management, order tracking, analytics dashboard, and a seamless shopping experience with filtering, cart functionality, and secure Stripe checkout integration.",
+      "A full-stack eCommerce platform built using the MERN Stack with role-based access for Admin and Buyers. Implemented product management, order tracking, analytics dashboard, and a seamless shopping experience with filtering, cart functionality, and secure Stripe checkout integration.",
     url: "https://spartax.vercel.app/",
+    code_url: "https://github.com/shoaibmuhammad-dev/E-commerce-Store.git",
     type: "Ecommerce Website",
     tech_stack: [
       "Reactjs",
@@ -57,6 +60,8 @@ export const PROJECTS = [
     description:
       "A static real estate website developed for a client using HTML, Tailwind CSS, and JavaScript. Accurately replicated an existing design with a fully responsive, cross-browser compatible layout, delivering a pixel-perfect clone aligned with client requirements.",
     url: "https://no-broker-website.vercel.app/",
+    code_url:
+      "https://github.com/shoaibmuhammad-dev/nobroker-real-estate-wesbite.git",
     type: "Website",
     tech_stack: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
   },

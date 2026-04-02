@@ -9,7 +9,7 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <AnimatedText key={index}>
-      <article className="w-full border border-gray-200 p-3 xl:p-5 rounded-3xl mx-auto xl:min-h-[84vh] 2xl:min-h-[76vh]">
+      <article className="w-full border border-gray-200 p-3 xl:p-5 rounded-3xl mx-auto">
         {/* Image */}
         <Image
           src={project?.image}
@@ -29,22 +29,12 @@ const ProjectCard = ({ project, index }) => {
           <h2 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight">
             {project?.title}
           </h2>
-
-          <Link
-            href={project?.url || `/`}
-            aria-label={`View ${project?.title} project`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-300/30 text-gray-500 px-2 py-2 rounded-lg inline-flex items-center hover:bg-black hover:text-white transition-all duration-300"
-          >
-            <FiArrowUpRight className="text-xl" />
-          </Link>
         </header>
 
         {/* Description */}
         <div className="w-full mt-2">
           {project?.description && (
-            <p className="text-base leading-relaxed secondary-text tracking-tight">
+            <p className="text-base leading-[1.4] secondary-text tracking-tight">
               {project.description}
             </p>
           )}
@@ -53,12 +43,39 @@ const ProjectCard = ({ project, index }) => {
           <ul className="flex flex-wrap gap-2 mt-3" aria-label="Tech stack">
             {project?.tech_stack?.map((tech) => (
               <li key={tech}>
-                <span className="text-xs bg-gray-100 px-2.5 py-1 rounded-xl">
+                <span className="text-xs bg-gray-100 px-2.5 py-1 rounded-xl text-gray-600">
                   {tech}
                 </span>
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="w-full mt-5 flex items-center justify-center gap-2">
+          {project?.url && (
+            <Link
+              href={project?.url || `/`}
+              aria-label={`View ${project?.title} project`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-300/30 text-gray-600 w-full px-3 py-3.5 text-sm tracking-tight leading-none font-medium rounded-2xl flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-all duration-300"
+            >
+              Live Preview
+              <FiArrowUpRight className="text-lg" />
+            </Link>
+          )}
+          {project?.code_url && (
+            <Link
+              href={project?.code_url || `/`}
+              aria-label={`View ${project?.title} source code on github`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-300/30 text-gray-600 w-full px-3 py-3.5 text-sm tracking-tight leading-none font-medium rounded-2xl flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-all duration-300"
+            >
+              Source Code
+              <FiArrowUpRight className="text-lg" />
+            </Link>
+          )}
         </div>
 
         {/* Structured Data (SEO boost) */}
@@ -70,7 +87,7 @@ const ProjectCard = ({ project, index }) => {
               "@type": "CreativeWork",
               name: project.title,
               description: project.description,
-              url: project.url,
+              url: project.url ? project.url : project.code_url,
               image: project.image,
               author: {
                 "@type": "Person",
