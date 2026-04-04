@@ -21,7 +21,7 @@ export const PROJECTS = [
     title: "Library Management System",
     description:
       "A full-stack Library Management System built using the MERN Stack. The system provides role-based access for Admins and Students, allowing efficient management of books, student accounts, and borrowing requests.",
-    url: null,
+    url: "https://library-management-system-student-portal.vercel.app/login",
     code_url: "https://github.com/shoaibmuhammad-dev/Library-Management-System",
     type: "Website App",
     tech_stack: [
