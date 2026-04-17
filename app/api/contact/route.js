@@ -9,8 +9,6 @@ export async function POST(req) {
     const USER = process.env.USER;
     const PASSWORD = process.env.PASSWORD;
 
-    console.log(HOST, PORT, USER, PASSWORD);
-
     if (!name || !email || !message) {
       return new Response(
         JSON.stringify({ error: "All fields are required." }),
@@ -30,8 +28,9 @@ export async function POST(req) {
 
     // Email content
     const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: `"Portfolio Contact" <${USER}>`,
       to: USER,
+      replyTo: email,
       subject: `New Message from ${name}`,
       text: `
         You have a new message from your portfolio contact form:
