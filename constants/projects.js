@@ -52,6 +52,24 @@ export const PROJECTS = [
     ],
   },
   {
+    image: "/projects/markettoll.png",
+    title: "Markettoll",
+    description:
+      "Built the complete frontend of a full-stack e-commerce platform from scratch using React (Vite), translating Figma designs into a responsive and production-ready user interface. Integrated RESTful APIs to support core e-commerce workflows including product management, order processing, and order history. Focused on clean architecture, reusable components, and seamless user experience across the entire purchase journey.",
+    url: "https://markettoll.com/",
+    type: "Web App",
+    tech_stack: [
+      "Reactjs",
+      "Tailwind CSS",
+      "Stripe",
+      "Context API",
+      "REST API Integration",
+      "Axios",
+      "Firebase",
+      "Product Catalog",
+    ],
+  },
+  {
     image: "/projects/library-management-system-mockup.png",
     title: "Library Management System",
     description:
