@@ -17,6 +17,41 @@ export const PROJECTS = [
     ],
   },
   {
+    image: "/projects/carveeps-mockup.png",
+    title: "Carveeps",
+    description:
+      "Developed the Manager Panel for a multi-role car service platform (Users, Managers, Admin) that enables businesses to manage services such as car washes, oil changes, and maintenance operations. Focused on clean UI/UX, efficient data flow, and maintainable component architecture to ensure a smooth operational experience for managers.",
+    url: "https://app.carveeps.com/",
+    type: "Web App",
+    tech_stack: [
+      "Reactjs",
+      "Tailwind CSS",
+      "Stripe",
+      "Context API",
+      "Axios",
+      "API Integration",
+    ],
+  },
+  {
+    image: "/projects/givexchange.png",
+    title: "giveXchange",
+    description:
+      "Developed the complete frontend of a multi-interface community-driven e-commerce platform, enabling users to buy and sell products within localized community networks. Translated Figma designs into three fully functional interfaces: Admin Dashboard, Community Owner Portal, and Buyer/Seller UI. Focused on modular architecture, reusable components, and responsive design to ensure maintainability and scalability across complex multi-role workflows.",
+    url: "https://user.thegivexchange.com/",
+    type: "Web App",
+    tech_stack: [
+      "Reactjs",
+      "Tailwind CSS",
+      "Stripe",
+      "Redux Toolkit",
+      "Redux Toolkit Query",
+      "API Integration",
+      "Product Catalog",
+      "Order Management",
+      "e-Commerce",
+    ],
+  },
+  {
     image: "/projects/library-management-system-mockup.png",
     title: "Library Management System",
     description:
@@ -66,29 +101,6 @@ export const PROJECTS = [
     tech_stack: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
   },
   // {
-  //   image: "/projects/carveeps-mockup.png",
-  //   title: "Carveeps",
-  //   description: "",
-  //   url: "https://app.carveeps.com/",
-  //   type: "Web App",
-  //   tech_stack: [
-  //     "Reactjs",
-  //     "Nodejs",
-  //     "Expressjs",
-  //     "MongoDB",
-  //     "Tailwind CSS",
-  //     "Stripe",
-  //   ],
-  // },
-  // {
-  //   image: "/projects/personal-portfolio-project-mockup.png",
-  //   title: "Personal Portfolio",
-  //   description: "",
-  //   url: "https://shoaib-muhammad.vercel.app/",
-  //   type: "Website",
-  //   tech_stack: ["Reactjs", "Tailwind CSS", "Framer Motion"],
-  // },
-  // {
   //   image: "/projects/dignite-studios-website.png",
   //   title: "Dignite Studios",
   //   description: "",
@@ -96,28 +108,31 @@ export const PROJECTS = [
   //   type: "Website",
   //   tech_stack: ["Nextjs", "Tailwind CSS", "Framer Motion"],
   // },
-  // {
-  //   image: "/projects/8.png",
-  //   title: "NYKN",
-  //   description: "",
-  //   url: "https://www.nowyouknownashville.com/",
-  //   type: "Landing Page",
-  //   tech_stack: ["Reactjs", "Tailwind CSS"],
-  // },
-  // {
-  //   image: "/projects/my-garage-outlet-landing-page.png",
-  //   title: "My Garage Outlet",
-  //   description: "",
-  //   url: "https://www.mygarageoutlet.com/",
-  //   type: "Landing Page",
-  //   tech_stack: ["Reactjs", "Tailwind CSS"],
-  // },
-  // {
-  //   image: "/projects/6.png",
-  //   title: "Bioyap",
-  //   description: "",
-  //   url: "https://www.bioyap.com/",
-  //   type: "Landing Page",
-  //   tech_stack: ["Reactjs", "Tailwind CSS"],
-  // },
+  {
+    image: "/projects/8.png",
+    title: "NYKN",
+    description:
+      "Created an engaging landing page for a mobile travel app that uncovers Nashville’s hidden history and local secrets. Structured content to effectively communicate unique value propositions, including curated recommendations across multiple categories and a guided 3-hour tour. Focused on storytelling-driven design and intuitive layout to appeal to both tourists and locals.",
+    url: "https://www.nowyouknownashville.com/",
+    type: "Landing Page",
+    tech_stack: ["Reactjs", "Tailwind CSS"],
+  },
+  {
+    image: "/projects/my-garage-outlet-landing-page.png",
+    title: "My Garage Outlet",
+    description:
+      "Designed and developed a high-conversion landing page for a mobile app focused on discovering, hosting, and connecting through local garage sales. Built a clean, user-friendly interface that highlights core features such as event discovery, hosting tools, and community engagement. Emphasized responsive design and smooth UI interactions to enhance user acquisition.",
+    url: "https://www.mygarageoutlet.com/",
+    type: "Landing Page",
+    tech_stack: ["Reactjs", "Tailwind CSS"],
+  },
+  {
+    image: "/projects/6.png",
+    title: "Bioyap",
+    description:
+      "Developed a modern landing page for a professional networking app tailored to pharma industry professionals. Designed to clearly present the platform’s value in fostering connections, collaboration, and career growth. Prioritized clarity, accessibility, and a polished visual hierarchy to target a professional audience.",
+    url: "https://www.bioyap.com/",
+    type: "Landing Page",
+    tech_stack: ["Reactjs", "Tailwind CSS"],
+  },
 ];

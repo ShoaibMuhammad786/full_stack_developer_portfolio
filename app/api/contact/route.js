@@ -7,18 +7,18 @@ export async function POST(req) {
     if (!name || !email || !message) {
       return new Response(
         JSON.stringify({ error: "All fields are required." }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     // Create transporter using your email credentials
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com", // or your SMTP host
+      host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
-        user: "smshoaib2001@gmail.com", // your email
-        pass: "kapa vhuz qvah bqyv", // your app password
+        user: "smshoaib2001@gmail.com",
+        pass: "aswxkdjzppemjqvq",
       },
     });
 
@@ -41,7 +41,7 @@ export async function POST(req) {
 
     return new Response(
       JSON.stringify({ success: "Message sent successfully!" }),
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Email sending failed:", error);
@@ -49,7 +49,7 @@ export async function POST(req) {
       JSON.stringify({
         error: "Failed to send message. Please try again later.",
       }),
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
