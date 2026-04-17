@@ -13,8 +13,8 @@ body {
 }
 
 .main-heading {
-  font-size: clamp(35px, 4.5vw, 70px);
-  @apply font-semibold tracking-tighter leading-[1] text-start;
+  font-size: clamp(35px, 4.5vw, 55px);
+  @apply font-semibold tracking-tighter leading-[1.1] text-start;
 }
 
 .secondary-text {

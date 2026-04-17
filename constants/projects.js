@@ -33,7 +33,7 @@ export const PROJECTS = [
     ],
   },
   {
-    image: "/projects/givexchange.png",
+    image: "/projects/giveXchange.png",
     title: "giveXchange",
     description:
       "Developed the complete frontend of a multi-interface community-driven e-commerce platform, enabling users to buy and sell products within localized community networks. Translated Figma designs into three fully functional interfaces: Admin Dashboard, Community Owner Portal, and Buyer/Seller UI. Focused on modular architecture, reusable components, and responsive design to ensure maintainability and scalability across complex multi-role workflows.",

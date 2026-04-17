@@ -30,10 +30,16 @@ const Hero = () => {
       {/* PRIMARY H1 — MOST IMPORTANT SEO ELEMENT */}
       <AnimatedText direction="right">
         <header>
-          <h1 id="hero-heading" className="main-heading z-10">
+          {/* <h1 id="hero-heading" className="main-heading z-10">
             <strong className="font-semibold">
               Full Stack Web Developer <br />
               Building High-Performance Web Applications
+            </strong>
+          </h1> */}
+          <h1 id="hero-heading" className="main-heading z-10">
+            <strong className="font-semibold">
+              Frontend Developer | React & Next.js Specialist - Building
+              High-Performance, Scalable Web Applications
             </strong>
           </h1>
         </header>
@@ -42,23 +48,33 @@ const Hero = () => {
       {/* SUPPORTING DESCRIPTION (KEYWORD-RICH, HUMAN) */}
       <AnimatedText direction="left">
         <p className="main-description mt-4 lg:max-w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
-          I’m <strong className="font-medium">Shoaib Muhammad</strong>, a full
+          I’m Shoaib Muhammad, a{" "}
+          <strong className="font-medium">Frontend Developer</strong> focused on
+          building fast, scalable, and SEO-friendly web applications using
+          <strong className="font-medium">React.js</strong> and{" "}
+          <strong className="font-medium">Next.js.</strong>
+          {/* I’m <strong className="font-medium">Shoaib Muhammad</strong>, a full
           stack web developer specializing in building fast, scalable, and
           SEO-friendly web applications using the{" "}
-          <strong className="font-medium">MERN stack</strong>.
+          <strong className="font-medium">MERN stack</strong>. */}
         </p>
       </AnimatedText>
 
       <AnimatedText direction="left">
         <p className="main-description mt-1 lg:max-w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
-          I create modern frontends with{" "}
+          {/* I create modern frontends with{" "}
           <strong className="font-medium">React.js</strong> and{" "}
           <strong className="font-medium">Next.js</strong>, and develop robust,
           secure backends using <strong className="font-medium">Node.js</strong>
           , <strong className="font-medium">Express.js</strong>, and{" "}
           <strong className="font-medium">MongoDB</strong>. My focus is on
           performance, clean architecture, maintainable code, and user-centric
-          digital experiences that rank well on search engines.
+          digital experiences that rank well on search engines. */}
+          I specialize in transforming designs into pixel-perfect, responsive
+          web applications and creating seamless user experiences with clean,
+          maintainable code. My work emphasizes performance optimization,
+          accessibility, and modern UI/UX standards to deliver products that not
+          only look great but perform exceptionally well.
         </p>
       </AnimatedText>
 

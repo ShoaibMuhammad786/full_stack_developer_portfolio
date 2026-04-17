@@ -2,9 +2,9 @@ import HomePage from "@/components/home/HomePage";
 
 export const metadata = {
   title:
-    "Full Stack Web Developer (MERN, React, Next.js, Node.js) | Shoaib Muhammad",
+    "Frontend Web Developer (React, Next.js, Tailwind CSS) | Shoaib Muhammad",
   description:
-    "Shoaib Muhammad is a Full Stack Web Developer specializing in MERN stack, React, Next.js, Node.js, Express.js and MongoDB. I build fast, scalable, and SEO-friendly web applications with a focus on performance, clean architecture, and user experience.",
+    "Shoaib Muhammad is a Frontend Web Developer specializing in React, Next.js, and Tailwind CSS. I build fast, scalable, and SEO-friendly web applications with a focus on performance, clean architecture, and user experience.",
 };
 
 export default function Home() {

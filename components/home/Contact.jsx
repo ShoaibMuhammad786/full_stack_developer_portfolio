@@ -24,8 +24,7 @@ const Contact = () => {
 
         <AnimatedText>
           <p className="main-description lg:w-[85%] text-start text-xl leading-[1.35] secondary-text tracking-tight">
-            I’m a{" "}
-            <strong className="font-medium">Full Stack MERN Developer</strong>{" "}
+            I’m a <strong className="font-medium">Frontend Developer</strong>{" "}
             specializing in building fast, scalable, and SEO-friendly web
             applications. Whether you want to start a new project, optimize an
             existing product, or collaborate on innovative ideas — I’m open to
