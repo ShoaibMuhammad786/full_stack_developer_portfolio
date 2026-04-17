@@ -4,6 +4,13 @@ export async function POST(req) {
   try {
     const { name, email, message } = await req.json();
 
+    const HOST = process.env.HOST;
+    const PORT = process.env.SMTP_PORT;
+    const USER = process.env.USER;
+    const PASSWORD = process.env.PASSWORD;
+
+    console.log(HOST, PORT, USER, PASSWORD);
+
     if (!name || !email || !message) {
       return new Response(
         JSON.stringify({ error: "All fields are required." }),
@@ -11,21 +18,20 @@ export async function POST(req) {
       );
     }
 
-    // Create transporter using your email credentials
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
+      host: HOST,
+      port: Number(PORT),
       secure: true,
       auth: {
-        user: "smshoaib2001@gmail.com",
-        pass: "aswxkdjzppemjqvq",
+        user: USER,
+        pass: PASSWORD,
       },
     });
 
     // Email content
     const mailOptions = {
       from: `"${name}" <${email}>`,
-      to: "smshoaib2001@gmail.com",
+      to: USER,
       subject: `New Message from ${name}`,
       text: `
         You have a new message from your portfolio contact form:
