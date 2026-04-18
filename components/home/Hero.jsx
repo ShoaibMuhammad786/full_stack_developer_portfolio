@@ -50,7 +50,7 @@ const Hero = () => {
         <p className="main-description mt-4 lg:max-w-[85%] text-start text-xl leading-[1.3] secondary-text z-10 tracking-tight">
           I’m Shoaib Muhammad, a{" "}
           <strong className="font-medium">Frontend Developer</strong> focused on
-          building fast, scalable, and SEO-friendly web applications using
+          building fast, scalable, and SEO-friendly web applications using{" "}
           <strong className="font-medium">React.js</strong> and{" "}
           <strong className="font-medium">Next.js.</strong>
           {/* I’m <strong className="font-medium">Shoaib Muhammad</strong>, a full

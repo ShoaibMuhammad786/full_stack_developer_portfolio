@@ -25,8 +25,9 @@ const AboutFrontendDev = () => {
           specializing in building fast, scalable, and SEO-friendly web
           applications using{" "}
           <strong className="font-medium">React.js and Next.js</strong>. I focus
-          on creating modern, high-performance user interfaces that deliver
-          seamless and engaging user experiences.
+          on creating modern, high-performance user interfaces while seamlessly
+          integrating backend services to deliver complete, functional user
+          experiences.
         </p>
       </AnimatedText>
 
@@ -38,7 +39,8 @@ const AboutFrontendDev = () => {
       >
         {[
           "Expert in responsive UI development using React.js, Next.js, and Tailwind CSS.",
-          "Skilled in converting Figma and design systems into pixel-perfect, accessible interfaces.",
+          "Skilled in integrating RESTful APIs and handling real-time data flows in production applications.",
+          "Experienced in implementing authentication flows (JWT, sessions) and managing protected routes on the client side.",
           "Strong understanding of state management using Redux Toolkit and Context API.",
           "Focused on performance optimization, Core Web Vitals, accessibility, and clean component architecture.",
         ].map((skill, index) => (
@@ -70,7 +72,8 @@ const AboutFrontendDev = () => {
           <strong className="font-medium">
             intuitive, performant, and user-centric interfaces
           </strong>{" "}
-          that enhance user engagement and deliver real business value.
+          backed by reliable data integration and real-world functionality that
+          enhance user engagement and deliver real business value.
         </p>
       </AnimatedText>
     </section>
