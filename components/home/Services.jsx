@@ -12,7 +12,10 @@ const Services = () => {
       {/* Section Heading */}
       <AnimatedText>
         <header>
-          <h2 id="services-heading" className="section-heading text-center">
+          <h2
+            id="services-heading"
+            className="section-heading text-center max-w-3xl mx-auto"
+          >
             <strong className="font-semibold">
               Web Development & Frontend Services
             </strong>
@@ -26,7 +29,7 @@ const Services = () => {
         aria-label="List of web development services"
       >
         {SERVICES?.map((service, index) => (
-          <ServiceCard key={service.slug} service={service} index={index} />
+          <ServiceCard service={service} key={service?.title} />
         ))}
       </div>
     </section>

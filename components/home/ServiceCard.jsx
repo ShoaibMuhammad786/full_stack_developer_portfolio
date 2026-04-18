@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ServiceCard = ({ service }) => {
   return (
-    <div role="listitem">
+    <div role="listitem" key={service.slug}>
       <AnimatedText>
         <article
           className="text-start p-6 2xl:p-10 rounded-2xl flex flex-col gap-y-3 bg-[#f9f9f9] lg:h-[260px] xl:h-[230px] 2xl:min-h-[250px]"

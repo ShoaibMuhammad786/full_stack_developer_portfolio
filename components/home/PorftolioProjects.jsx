@@ -17,7 +17,9 @@ const PorftolioProjects = () => {
 
       <div className="w-full mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
         {PROJECTS?.map((project, index) => {
-          return <ProjectCard project={project} index={index} />;
+          return (
+            <ProjectCard project={project} index={index} key={project?.title} />
+          );
         })}
       </div>
 

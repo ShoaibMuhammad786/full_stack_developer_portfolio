@@ -20,7 +20,7 @@ export const PROJECTS = [
     image: "/projects/carveeps-mockup.png",
     title: "Carveeps",
     description:
-      "Developed the Manager Panel for a multi-role car service platform (Users, Managers, Admin) that enables businesses to manage services such as car washes, oil changes, and maintenance operations. Focused on clean UI/UX, efficient data flow, and maintainable component architecture to ensure a smooth operational experience for managers.",
+      "Developed the Manager Panel for a multi-role car service platform (Users, Managers, Admin) that enables businesses to manage services such as car washes, oil changes, and maintenance operations. Focused on clean UI/UX, efficient data flow, and maintainable component architecture to ensure a smooth operational experience for users.",
     url: "https://app.carveeps.com/",
     type: "Web App",
     tech_stack: [
@@ -93,7 +93,8 @@ export const PROJECTS = [
     title: "Spartax",
     description:
       "A full-stack eCommerce platform built using the MERN Stack with role-based access for Admin and Buyers. Implemented product management, order tracking, analytics dashboard, and a seamless shopping experience with filtering, cart functionality, and secure Stripe checkout integration.",
-    url: "https://spartax.vercel.app/",
+    // url: "https://spartax.vercel.app/",
+    url: null,
     code_url: "https://github.com/shoaibmuhammad-dev/E-commerce-Store.git",
     type: "Ecommerce Website",
     tech_stack: [

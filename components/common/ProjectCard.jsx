@@ -6,9 +6,8 @@ import Link from "next/link";
 
 const ProjectCard = ({ project, index }) => {
   const isAboveFold = index < 2;
-
   return (
-    <AnimatedText key={index}>
+    <AnimatedText key={project.title}>
       <article className="w-full border border-gray-200 p-3 xl:p-5 rounded-3xl mx-auto">
         {/* Image */}
         <Image
